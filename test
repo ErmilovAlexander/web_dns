@@ -1,0 +1,81 @@
+$ORIGIN .
+$TTL 86400	; 1 day
+cloud			IN SOA	ns.cloud. admin.cloud. (
+				20110214   ; serial
+				10800      ; refresh (3 hours)
+				3600       ; retry (1 hour)
+				604800     ; expire (1 week)
+				86400      ; minimum (1 day)
+				)
+			NS	ns.cloud.
+			A	172.30.254.1
+$ORIGIN cloud.
+$TTL 3600	; 1 hour
+angry		A	172.30.7.10
+cirrus		A	172.30.5.3
+hn-ipmi-ibm		A	172.30.254.29
+			TXT	"313f3497f936295ba2650a1f2e9cbebaef"
+
+ipmi-storage		A	172.30.254.22
+			TXT	"31219cbd821064dec12be3f1c21623a01c"
+llar			A	172.30.254.1
+$TTL 86400	; 1 day
+localhost		A	127.0.0.1
+$TTL 3600	; 1 hour
+msu-hn-ipmi		A	172.30.254.14
+			TXT	"313811faab10973a35dfba38792cb172e3"
+nps-server		A	172.30.254.28
+			TXT	"00ceebe2f82bc8320054f7c282335c43c8"
+$TTL 86400	; 1 day
+ns		A	172.30.254.1
+$TTL 3600	; 1 hour
+rosy		A	172.30.10.3
+smoke		A	172.30.254.1
+st-ipmi-ibm		A	172.30.254.11
+			TXT	"316897b1fe63dfea99c41c326dc3f8afad"
+tiny		A	172.30.6.3
+w1-ipmi-ibm		A	172.30.254.30
+			TXT	"315766ece6f82e8ac46f209fc840b1029e"
+w1-ipmi-sup		A	172.30.254.23
+			TXT	"319b6a2be6cfd899639491ebf43f9087e1"
+w2-ipmi-ibm		A	172.30.254.20
+			TXT	"31f9a978020cf8353e4db950d73a49693a"
+w2-ipmi-sup		A	172.30.254.24
+			TXT	"3109082a63737d8895e4afa62aa34e08b4"
+w3-ipmi-ibm		A	172.30.254.15
+			TXT	"3100422015d176b73d33477a117fea1f97"
+w3-ipmi-sup		A	172.30.254.25
+			TXT	"31fcc7c03fd3e71b85cd5e4ee3227f3531"
+w4-ipmi-ibm		A	172.30.254.13
+			TXT	"31d957fe2001022be2ed4bf8a547cdf675"
+w4-ipmi-sup		A	172.30.254.26
+			TXT	"31301b1fc49afa080e9b292fb13f5e9f6f"
+w5-ipmi-ibm		A	172.30.254.16
+			TXT	"3172fde688f4116c0a214998fbc16a1531"
+w5-ipmi-sup		A	172.30.254.18
+			TXT	"31dcb4c547b87f7c8af0bce2236d4e01d8"
+w6-ipmi-ibm		A	172.30.254.31
+			TXT	"3155ba26ac344205fff92bc8a74d379318"
+w7-ipmi-ibm		A	172.30.254.17
+			TXT	"315adafde45d08fdb89d2027df67fa1432"
+w8-ipmi-ibm		A	172.30.254.27
+			TXT	"31920bd73e1c12565dbf327d28d5b71be7"
+
+hn-dell		A	172.30.254.251
+st-dell		A	172.30.232.10
+hn-ibm		A	172.30.232.2
+
+;TEST
+test		A	1.1.1.1
+test		A	1.1.1.1
+test		A	1.1.1.1
+test_new		A	1.1.1.2
+fa		A	2.2.2.2
+fa		A	2.2.2.2
+dfd		A	5.5.5.5
+dfd		A	5.5.5.5
+dfd		A	5.5.5.5
+dfd		A	5.5.5.5
+dfd		A	5.5.5.5
+ere		A	55.55.55.55
+ere		A	55.55.55.55

@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+{% block title %}TEST Записи!{% endblock %}
+{% block body %}
+    <form>
+            <input type="text" name="dns">
+            <input type="text" name="address">
+            <button action="/add/">OK</button>
+    </form>
+{% endblock %}
+
+
+
+<td><button type="submit">Edit</button></td>
+
+
+    <form action="" method="post">
+            {{ form.csrf }}
+            {{ form.hidden_tag() }}
+            <div class="input text">
+                {{ form.name.label }} {{ form.name }}
+                {{ form.address.label }} {{ form.address }}
+                <input type="submit" value="Append" />
+            </div>
+    </form>

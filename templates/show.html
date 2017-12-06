@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+{% block title %}DNS Записи!{% endblock %}
+{% block body %}
+<h1>Существующие записи DNS!</h1>
+    <form action="" method="post">
+            {{ form.csrf }}
+            <div class="input text">
+                {{ form.name.label }} {{ form.name }}
+                {{ form.address.label }} {{ form.address }}
+                <input type="submit" value="Append" />
+            </div>
+    </form>
+    <table>
+        <thead>
+        <th>DNS_NAME</th>
+        <th>Type</th>
+        <th>Adress</th>
+        <th>Action</th>
+        </thead>
+        <tbody>
+            {% for row in message %}
+                <tr>
+                  <td><input type="checkbox" name="a" value="{{ row[0] }}"><a href="http://{{ row[0] }}.cloud" target="_blank">{{ row[0] }}</a></td>
+                  <td>{{ row[1] }}</td>
+                  <td>{{ row[2] }}</td>
+                  <td><input type="submit" value="Edit" /><input type="submit" value="Delete" /></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
