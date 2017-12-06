@@ -2,7 +2,7 @@ from flask import Flask, render_template, flash, request, url_for, redirect
 from werkzeug.datastructures import MultiDict
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
 import get_dns
-
+import config_parse as CONF
 # print (PATH_TO_DBDNS)
 app = Flask(__name__)
 app.config.from_object('config')
@@ -46,4 +46,4 @@ def error_404(e):
     return (data, 404)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0',port=5200)
